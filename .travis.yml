@@ -15,5 +15,8 @@ android:
     - sleep 10
     - adb shell input keyevent 82
 
+  after_success:
+    - ./gradlew crashlyticsUploadDistributionDebug
+
   notifications:
     slack: conference-chat:G5uNTw0TmKDiRBIdXkcXKVDj
